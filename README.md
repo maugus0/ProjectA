@@ -38,7 +38,7 @@ private Boolean authorVerified; // Author verification status
 ### 5. Gamification & Stats
 ```java
 private Integer level;         // User level
-private Float point;           // Points/score
+private Float yuan;            // Points/currency (renamed from point)
 private Integer exp;           // Experience points
 private Float readTime;        // Total reading time
 private Integer readBookNum;   // Books read count
@@ -120,6 +120,8 @@ public User(
     <!-- 6. Audit -->
     <arg column="create_date" javaType="java.util.Date" jdbcType="TIMESTAMP" />
     <arg column="update_date" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+    <arg column="last_login" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+    <arg column="last_active" javaType="java.util.Date" jdbcType="TIMESTAMP" />
   </constructor>
 </resultMap>
 ```
